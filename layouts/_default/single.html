@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ .Title }}</title>
+  <script 
+                        type="module" 
+                        src="https://penmark.appsinprogress.com/dist/PostClient.js"
+                        draftsFolder="drafts"
+                        postsFolder="content/posts"
+                        imagesFolder="static/images/blogs"
+                        githubUsername="reshmapaul"
+                        githubRepoName="penmark_check"
+                        postfilepath="{{ .Params.link }}"
+                    ></script>
 </head>
 <body>
   <h1>{{ .Title }}</h1>
