@@ -1,0 +1,10 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "My Awesome Site"
+theme = "ananke"
+
+# Optional settings
+[params]
+  author = "Your Name"
+  description = "This is my awesome Hugo website!"
+

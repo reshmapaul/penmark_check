@@ -1,0 +1,20 @@
+<!-- layouts/_default/taxonomy.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Site.Title }} - Taxonomy</title>
+</head>
+<body>
+  <h1>Taxonomy: {{ .Title }}</h1>
+  
+  <div class="taxonomy-list">
+    {{ range .Pages }}
+      <div class="taxonomy-item">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </div>
+    {{ end }}
+  </div>
+</body>
+</html>
