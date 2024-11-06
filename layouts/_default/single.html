@@ -4,39 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }}</title>
-    <!-- Add other necessary meta tags, CSS files, etc. -->
 </head>
 <body>
 
-    <!-- Content for the post -->
     <article>
         <header>
             <h1>{{ .Title }}</h1>
             <p>{{ .Date.Format "January 2, 2006" }}</p>
         </header>
         <section>
-            {{ .Content }}  <!-- This will render the content of your post -->
+            {{ .Content }} <!-- This renders the content of your post -->
         </section>
     </article>
 
-    <!-- Penmark CMS Script -->
+    <!-- Penmark Script -->
     <script 
         type="module" 
         src="https://penmark.appsinprogress.com/dist/PostClient.js"
-        draftsFolder="content/drafts" 
+        draftsFolder="content/drafts"
         postsFolder="content/posts"
         imagesFolder="static/images/blogs"
         githubUsername="reshmapaul"
         githubRepoName="penmark_check"
-        postfilepath="{{ .RelPermalink }}"
-    ></script>
+        postfilepath="{{ .RelPermalink }}"  ></script>
 
-    <!-- Ensure the script runs after DOM is fully loaded -->
+    <!-- JavaScript to alert the post file path -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Initialize or refresh Penmark CMS client if needed
-            // This part is optional depending on whether Penmark script initializes automatically
-        });
+        // Access the value of postfilepath dynamically from the script tag
+        const postFilePath = "{{ .RelPermalink }}";
+        
+        // Alert the post file path
+        alert("Post File Path: " + postFilePath);
     </script>
 
 </body>
