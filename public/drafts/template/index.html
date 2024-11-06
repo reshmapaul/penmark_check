@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }}</title>
-    <!-- Add other necessary meta tags, CSS files, etc. -->
+    <title>My First Post</title>
+    
 </head>
 <body>
 
-    <!-- Content for the post -->
+    
     <article>
         <header>
-            <h1>{{ .Title }}</h1>
-            <p>{{ .Date.Format "January 2, 2006" }}</p>
+            <h1>My First Post</h1>
+            <p>November 1, 2024</p>
         </header>
         <section>
-            {{ .Content }}  <!-- This will render the content of your post -->
+            <p>This is my first post on Hugo!</p>
+  
         </section>
     </article>
 
-    <!-- Penmark CMS Script -->
+    
     <script 
         type="module" 
         src="https://penmark.appsinprogress.com/dist/PostClient.js"
@@ -28,14 +29,14 @@
         imagesFolder="static/images/blogs"
         githubUsername="reshmapaul"
         githubRepoName="penmark_check"
-        postfilepath="{{ .RelPermalink }}"
+        postfilepath="/drafts/template/"
     ></script>
 
-    <!-- Ensure the script runs after DOM is fully loaded -->
+    
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize or refresh Penmark CMS client if needed
-            // This part is optional depending on whether Penmark script initializes automatically
+            
+            
         });
     </script>
 
