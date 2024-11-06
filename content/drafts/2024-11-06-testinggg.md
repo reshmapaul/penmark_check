@@ -1,1 +1,0 @@
-This is my first post on Hugo! I'm just getting started with Hugo and Penmark CMS. Here are some things I've learned so far: - Penmark CMS is integrated with GitHub. - Hugo automatically processes markdown files for static site generation. - The workflow is very smooth for content management. Stay tuned for more posts!
