@@ -21,16 +21,15 @@
 
     <!-- Penmark CMS Script -->
     <script 
-        type="module" 
-        src="https://penmark.appsinprogress.com/dist/PostClient.js"
-        draftsFolder="content/drafts" 
-        postsFolder="content/posts"
-        imagesFolder="static/images/blogs"
-        githubUsername="reshmapaul"
-        githubRepoName="penmark_check"
-        postfilepath="{{ .RelPermalink }}"
-    ></script>
-
+    type="module" 
+    src="https://penmark.appsinprogress.com/dist/PostClient.js"
+    draftsFolder="content/drafts"   
+    postsFolder="content/posts"     
+    imagesFolder="static/images/blogs"
+    githubUsername="reshmapaul"
+    githubRepoName="penmark_check"
+    postfilepath="{{ if .Draft }}content/drafts/{{ .File.BaseFileName }}.md{{ else }}content/posts/{{ .File.BaseFileName }}.md{{ end }}" 
+></script>
     <!-- Ensure the script runs after DOM is fully loaded -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
